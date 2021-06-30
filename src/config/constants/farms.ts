@@ -40,7 +40,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
-  /* {
+  /*  {
     pid: 2,
     risk: 5,
     isTokenOnly: false,
@@ -50,15 +50,15 @@ const farms: FarmConfig[] = [
       56: '0xc02B405EED5fe43d00886622f1a3C046e4de1792',
       137: '0xc02B405EED5fe43d00886622f1a3C046e4de1792',
     },
-    tokenSymbol: 'HONEST',
-        tokenAddresses: {
+    tokenSymbol: 'HONEST-MATIC',
+    tokenAddresses: {
       97: '',
       56: '0x4dA646B71014332AE8370017d05205346d3ca50A',
       137: '0x4dA646B71014332AE8370017d05205346d3ca50A',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
-  },  */
+  }, */
   {
     pid: 3,
     risk: 5,
