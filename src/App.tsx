@@ -52,24 +52,24 @@ const App: React.FC = () => {
               <Farms />
             </Route>
             <Route path="/pools">
-              <Farms tokenMode/>
+              <Farms tokenMode />
             </Route>
             <Route path="/kitchenpools">
-             <Pools />
+              <Pools />
             </Route>
             <Route path="/buy">
-             <Trade />
+              <Trade />
             </Route>
             <Route path="/liquidity">
-             <Liquidity />
+              <Liquidity />
             </Route>
             <Route path="/ido">
-             <Ifos />
+              <Ifos />
             </Route>
             <Route path="/nft">
-             <Launchpad />
+              <Launchpad />
             </Route>
-            
+
             {/* <Route path="/lottery"> */}
             {/*  <Lottery /> */}
             {/* </Route> */}
@@ -86,11 +86,8 @@ const App: React.FC = () => {
             {/* 404 */}
             <Route component={NotFound} />
           </Switch>
-           <Image src="/images/egg/farmback.png" alt="illustration" width={1452} height={687} responsive />
         </Suspense>
       </Menu>
-      
-
     </Router>
   )
 }

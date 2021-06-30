@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Cookies from 'universal-cookie';
+import Cookies from 'universal-cookie'
 import { Image, Heading, Text, BaseLayout } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
@@ -31,17 +31,17 @@ const Hero = styled.div`
 
   ${({ theme }) => theme.mediaQueries.lg} {
     background-image: url('/images/egg/home.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     min-width: 10%;
-  min-height: 10%;
-  width: 100%;
-  height: 10%;
-  
-  align-items: center;
-  display: flex;
-  flex: 1;
+    min-height: 10%;
+    width: 100%;
+    height: 10%;
+
+    align-items: center;
+    display: flex;
+    flex: 1;
   }
 `
 
@@ -89,25 +89,52 @@ const CTACards = styled(BaseLayout)`
   }
 `
 
-const Home: React.FC = () => {
-    const TranslateString = useI18n()
-    const cookies = new Cookies();
-    const aint = "It ain't much but it's Honest Work"
+const BannerContainer = styled.div`
+  background: #e78d45;
+  border-radius: 24px;
+  padding: 12px;
+  margin: 24px;
+`
 
-    return (
-        <Page>
-            <div>
-                <Cards>
-                    <FarmStakingCard />
-                    <CakeStats />
-                </Cards>
-                <Cards>
-                    <TotalValueLockedCard />
-                    <MetaMask/>
-                </Cards>
-            </div>
-        </Page>
-    )
+const BannerContent = styled.div`
+  margin: 0 auto;
+  text-align: center;
+  padding: 24px;
+`
+
+const BannerLink = styled.a`
+  color: #fff;
+  margin: 24px 0px;
+  text-align: center;
+  font-size: 18px;
+`
+
+const Home: React.FC = () => {
+  const TranslateString = useI18n()
+  const cookies = new Cookies()
+  const aint = "It ain't much but it's Honest Work"
+
+  return (
+    <Page>
+      <BannerContainer>
+        <BannerContent>
+          <BannerLink href="https://quickswap.exchange/#/swap?outputCurrency=0x4da646b71014332ae8370017d05205346d3ca50a">
+            Buying $🚜? Make sure you <u>set slippage to 10-11%</u> on Quickswap!
+          </BannerLink>
+        </BannerContent>
+      </BannerContainer>
+      <div>
+        <Cards>
+          <FarmStakingCard />
+          <CakeStats />
+        </Cards>
+        <Cards>
+          <TotalValueLockedCard />
+          <MetaMask />
+        </Cards>
+      </div>
+    </Page>
+  )
 }
 
 export default Home
